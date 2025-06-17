@@ -12,7 +12,9 @@ RUN rm -rf /etc/nginx/conf.d/default.conf
 #         chmod -R 755 /etc/nginx/ && \
 #         chown -R nginx:nginx /var/log/nginx
 # RUN touch /var/run/nginx.pid && \
-#     chown -R nginx:nginx /var/run/nginx.pid /run/nginx.pid
+#    chown -R nginx:nginx /var/run/nginx.pid /run/nginx.pid
+
+
 COPY expense.conf /etc/nginx/nginx.conf
 COPY code /usr/share/nginx/html/
 USER nginx
